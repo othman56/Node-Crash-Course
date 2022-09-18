@@ -1,8 +1,11 @@
-const Person = require("./person");
-const path = require("path");
+// we bring in the logger class we exported
+const Logger = require('./logger')
 
-const person1 = new Person("usman hassan", 30);
+// create a new logger object called myLogger
+const myLogger = new Logger();
 
-console.log(person1.greeting());
+// init event on the new class object
+myLogger.on('message', (data) => console.log('called event', data))
 
-console.log(path.basename(__filename));
+// call the log method and pass in the message
+myLogger.log('hello world')
