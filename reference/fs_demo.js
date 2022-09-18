@@ -9,7 +9,7 @@ const path = require("path");
 //   console.log("Folder Created...");
 // });
 
-//  To create and write to a file and append to a file
+//  To create and write to a file and also append to a file
 
 // fs.writeFile(
 //   path.join(__dirname, "/test", "hello.txt"),
