@@ -10,4 +10,11 @@ class Logger extends EventEmitter{
     }
 }
 
-module.exports = Logger;
+const myLogger = new Logger();
+// module.exports = Logger;
+myLogger.on('message', (data) => console.log('called event', data))
+
+// call the log method and pass in the message
+myLogger.log('hello world')
+myLogger.log('hi')
+myLogger.log('hello')
